@@ -5,7 +5,7 @@ Plugin.create :mashiro do
     [
       service,
       msgs.map do |msg|
-        msg[:message] = msg[:message].gsub /[ァ-ヴ]/u, "ましろ"
+        msg[:message] = msg[:message].gsub /[ァ-ヴ]+/u, "ましろ"
         msg
       end
     ]
